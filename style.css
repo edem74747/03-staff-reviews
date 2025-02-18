@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom props */
+:root {
+  --main-color: #6062ec;
+  --secondary-color: #3b3b3b;
+  --white: #e0e0e0;
+  --basic: color-mix(in srgb, var(--main-color) 0%, white 70%);
+}
+
+body {
+  background-color: var(--secondary-color) !important;
+  width: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  & .underline {
+    width: 5rem;
+    height: 0.25rem;
+    background-color: var(--main-color);
+    margin-bottom: 1rem;
+  }
+}
+
+/* Review wrapper */
+.review {
+  background-color: var(--basic);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 18rem;
+  margin: 0 auto;
+
+  & .img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: var(--main-color);
+    border-radius: 50%;
+
+    & img {
+      border-radius: 50%;
+      width: 100%;
+      max-width: 13rem;
+      display: block;
+    }
+  }
+}
+
+/* Review content */
+.review-content {
+  & #author {
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  & #job {
+    color: var(--main-color);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  & #info {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Buttons */
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  & .prev-btn,
+  & .next-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+/* Hover effect */
+.button-wrapper .prev-btn:hover,
+.button-wrapper .next-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+/* random review */
+.random-btn {
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.random-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
